@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0b0b;
+    color: #fff
+}
+
+nav {
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 8%;
+    background: rgba(0, 0, 0, .6);
+    backdrop-filter: blur(10px)
+}
+
+#facebook:hover {
+    color: #1877F2;
+}
+
+#facebook {
+    text-decoration: underline;
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+    list-style: none
+}
+
+a {
+    color: #fff;
+    text-decoration: none
+}
+
+.hero {
+    height: 100vh;
+    background: url("banner.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center
+}
+
+.overlay {
+    margin-left: 8%;
+    background: rgba(0, 0, 0, .45);
+    padding: 40px;
+    border-radius: 20px
+}
+
+.btn,
+button {
+    background: #3b82f6;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px
+}
+
+section {
+    padding: 90px 8%
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px
+}
+
+.card {
+    background: rgba(255, 255, 255, .08);
+    padding: 20px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px)
+}
+
+input,
+textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+    border: none
+}
+
+textarea {
+    height: 140px
+}
+
+.mobile {
+    display: none;
+}
+
+/* Targets standard mobile screens and smaller */
+@media screen and (max-width: 480px) {
+    #logo {
+        display: none;
+    }
+
+    .hero {
+        max-height: 75vh;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .overlay {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    #services {
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    nav {
+        padding: 12px;
+        justify-content: center;
+    }
+
+    nav ul {
+        margin:5px;
+    }
+
+    nav ul:last-child {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+
+    nav li {
+
+        text-align: center;
+
+        flex: 1;
+
+    }
+
+    nav a {
+
+        display: block;
+
+        padding: 8px 0;
+
+    }
+}
