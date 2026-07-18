@@ -1,1 +1,1 @@
-Place your banner image in this folder as banner.jpg
+
